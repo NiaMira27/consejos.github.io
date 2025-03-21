@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frase Aleatoria</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <script>
+        function mostrarFrase() {
+            const frases = [
+                "Toma una cucharada de miel en ayunas para la garganta.",
+                "Si te duele el estómago, un té de manzanilla te ayudará.",
+                "Nunca te duermas enojado, es malo para el alma.",
+                "Bebe agua tibia con limón en la mañana para limpiar el cuerpo.",
+                "No salgas con el pelo mojado o te resfriarás.",
+                "Come despacio y mastica bien para evitar problemas digestivos.",
+                "Si tienes tos, prueba con cebolla y miel.",
+                "Un poco de ajo crudo fortalece el sistema inmunológico.",
+                "Si te sientes débil, un caldo de pollo te revivirá.",
+                "No te olvides de caminar todos los días, el cuerpo lo necesita.",
+                "Escucha más de lo que hablas.",
+                "Trata a los demás como quieres que te traten.",
+                "Nunca te vayas a dormir enojado con tu pareja.",
+                "Ama con hechos, no solo con palabras.",
+                "Sé paciente, todo llega a su tiempo.",
+                "No guardes rencores, te enferman el alma.",
+                "Aprende a perdonar, pero también a poner límites.",
+                "Una carta escrita a mano vale más que mil mensajes.",
+                "No discutas por cosas sin importancia.",
+                "Un 'te quiero' sincero puede cambiar el día de alguien.",
+                "Una pizca de sal en el café reduce la acidez.",
+                "Para que el arroz quede suelto, agrégale unas gotas de limón.",
+                "No tires el pan duro, úsalo para hacer pudín o pan rallado.",
+                "Si la leche se está por derramar, pon una cuchara de metal en la olla.",
+                "Para quitar el olor a cebolla de las manos, frótalas con sal y limón.",
+                "No laves los hongos con agua, límpialos con un paño húmedo.",
+                "Para que los frijoles no den gases, agrégales una hojita de laurel.",
+                "Si cortaste demasiada cebolla, guárdala con un poco de vinagre para que no huela fuerte.",
+                "Nunca guardes los tomates en la nevera, pierden su sabor.",
+                "Un vaso con bicarbonato en la nevera elimina los malos olores.",
+                "Guarda dinero aunque sea poco, siempre sirve.",
+                "No gastes más de lo que ganas.",
+                "Antes de comprar algo, pregúntate si realmente lo necesitas.",
+                "Nunca pongas todos los huevos en una sola canasta.",
+                "Aprende a hacer las cosas por ti mismo, ahorrarás dinero.",
+                "Compra calidad, dura más.",
+                "No trabajes solo por dinero, haz lo que te haga feliz.",
+                "Aprende a negociar, todo es negociable.",
+                "Siempre lleva un dinero extra 'por si acaso'.",
+                "La paciencia y la constancia traen el éxito.",
+                "Un poco de vinagre y bicarbonato limpian casi todo.",
+                "No acumules cosas que no usas, alguien más las puede necesitar.",
+                "Sacude la casa todos los días para evitar el polvo.",
+                "Si algo se rompe, arréglalo antes de comprar otro.",
+                "No dejes los platos sucios de un día para otro.",
+                "El sol mata los malos olores en la ropa.",
+                "Limpia el espejo con papel periódico para que no queden marcas.",
+                "Para quitar el mal olor de los zapatos, ponles bicarbonato.",
+                "Siempre ten un costurero a la mano para emergencias.",
+                "Si manchas tu ropa con grasa, ponle talco antes de lavarla.",
+                "La paciencia es una virtud que pocos tienen.",
+                "No hagas a otros lo que no quieres que te hagan.",
+                "Todo lo que das, vuelve de alguna manera.",
+                "Aprende a disfrutar lo simple, ahí está la felicidad.",
+                "No te preocupes por lo que no puedes cambiar.",
+                "Rodéate de gente buena y todo será más fácil.",
+                "La risa es el mejor remedio para cualquier mal.",
+                "Si la vida te da limones, haz limonada.",
+                "Nunca dejes de aprender, la vida es una escuela.",
+                "Haz el bien sin mirar a quién.",
+                "Dormir bien es el mejor secreto de belleza.",
+                "Siempre hidrata tu piel, especialmente en invierno.",
+                "No abuses del maquillaje, la piel necesita respirar.",
+                "Un poco de aceite de coco hace maravillas para el cabello.",
+                "Si estás estresado, tomate un momento para respirar profundo.",
+                "Bebe suficiente agua, la piel lo agradecerá.",
+                "Caminar descalzo fortalece los pies.",
+                "Una sonrisa sincera te hace ver más bonito que cualquier filtro.",
+                "Evita el sol directo en las horas más fuertes.",
+                "No te preocupes tanto por las arrugas, son marcas de vida.",
+                "Para evitar que las hormigas entren, pon canela en las puertas.",
+                "Si el arroz se quema, ponle una rodaja de pan encima para absorber el sabor.",
+                "Un limón con clavos de olor ahuyenta mosquitos.",
+                "Para que la ropa huela bien, pon una bolsita de lavanda en el armario.",
+                "Usa posos de café para abonar las plantas.",
+                "Para limpiar el microondas, calienta agua con limón dentro.",
+                "Si tienes mala suerte, lleva un lazo rojo en la muñeca.",
+                "Cuando algo se te pierda, reza a San Antonio.",
+                "Si un anillo se atora en tu dedo, usa un poco de jabón.",
+                "Para desinflamar los ojos, usa rodajas de pepino o bolsitas de té frías.",
+                "Los niños aprenden más con el ejemplo que con palabras.",
+                "Siempre da un abrazo antes de dormir.",
+                "La familia es lo más importante, cuídala.",
+                "No grites, habla con amor y firmeza.",
+                "Cocina con tus hijos, es un tiempo valioso.",
+                "No todo se soluciona con regalos, el tiempo juntos vale más.",
+                "Enséñales a agradecer, es la clave de la felicidad.",
+                "No compares a los hijos entre ellos, cada uno es único.",
+                "Siempre ten dulces en casa para cuando lleguen los nietos.",
+                "Enséñales a respetar a los mayores.",
+                "Lo que siembras hoy, lo cosecharás mañana.",
+                "El respeto se gana con acciones, no con gritos.",
+                "No esperes a que sea tarde para decir 'te quiero'.",
+                "No tengas miedo de equivocarte, es parte de aprender.",
+                "La felicidad no está en las cosas, sino en las personas.",
+                "Siempre hay algo bueno en cada día, solo hay que saber verlo.",
+                "Disfruta cada etapa de la vida, todas tienen su encanto.",
+                "No pierdas la fe, todo mejora con el tiempo.",
+                "Lo simple es lo que realmente importa.",
+                "Y recuerda: “Más sabe el diablo por viejo que por diablo”."
+                        ];
+            document.getElementById("frase").innerText = frases[Math.floor(Math.random() * frases.length)];
+        }
+    </script>
+</head>
+<body onload="mostrarFrase()">
+    <h1>Consejo de la Abuela:</h1>
+    <div class="card-container">
+        <div class="card">
+            <p id="frase"></p>
+        </div>
+    </div>
+</body>
+</html>
